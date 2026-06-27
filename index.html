@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ismael Palay Madrigal | Full Stack Web Developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-name">ISMAEL PALAY</span>
+        <span class="nav__logo-sub">WEB DESIGN</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about" data-i18n="nav-about">About</a></li>
+        <li><a href="#work" data-i18n="nav-work">Work</a></li>
+        <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="lang-toggle" id="langToggle">ES</button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#work" data-i18n="nav-work">Work</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge" data-i18n="hero-badge">Available for projects</div>
+      <p class="hero__greeting" data-i18n="hero-greeting">Hi, I'm</p>
+      <h1 class="hero__title">
+        Ismael Palay<br />
+        <span class="hero__title-accent">Madrigal</span>
+      </h1>
+      <p class="hero__role" data-i18n="hero-role">Full Stack Web Developer · Landing Page Specialist</p>
+      <p class="hero__subtitle" data-i18n="hero-subtitle">
+        Freelance web developer specialized in high-converting landing pages<br />
+        and modern websites for businesses and entrepreneurs.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary" data-i18n="hero-btn-primary">See my work</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="hero-btn-ghost">Contact me</a>
+      </div>
+      <div class="hero__stats hero__stats--single">
+        <div class="hero__stat hero__stat--featured">
+          <span class="hero__stat-number" data-target="1">0</span><span class="hero__stat-plus">+</span>
+          <span class="hero__stat-label" data-i18n="hero-stat-years">Year of exp.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__visual">
+          <div class="about__card">
+            <div class="about__avatar">
+              <div class="about__avatar-ring"></div>
+              <div class="about__avatar-img">
+                <img src="foto_perfil.jpeg" alt="Ismael Palay Madrigal" class="about__avatar-photo" id="avatarPhoto" />
+              </div>
+            </div>
+            <div class="about__tags">
+              <span class="tag">HTML &amp; CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">SEO</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__label" data-i18n="about-label">About me</p>
+          <h2 class="section__title" data-i18n-html="about-title">Full Stack Developer<br />specialist in web &amp; landing pages</h2>
+          <p class="about__desc" data-i18n-html="about-desc-1">
+            I'm <strong>Ismael Palay Madrigal</strong>, a freelance web developer based in Texas.
+            I specialize in modern websites, high-converting landing pages, and custom web
+            solutions for businesses and entrepreneurs.
+          </p>
+          <p class="about__desc" data-i18n-html="about-desc-2">
+            I build responsive interfaces, integrate backend services, implement lead capture
+            systems, and deploy production-ready applications. My goal: help your business
+            generate more visibility, customers, and results.
+          </p>
+          <div class="about__skills">
+            <div class="skill">
+              <div class="skill__header">
+                <span>HTML / CSS</span><span>95%</span>
+              </div>
+              <div class="skill__bar"><div class="skill__fill" data-width="95"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span>JavaScript / TypeScript</span><span>80%</span>
+              </div>
+              <div class="skill__bar"><div class="skill__fill" data-width="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span>Tailwind CSS</span><span>88%</span>
+              </div>
+              <div class="skill__bar"><div class="skill__fill" data-width="88"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span>React / Next.js</span><span>40%</span>
+              </div>
+              <div class="skill__bar"><div class="skill__fill" data-width="40"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span>UI / UX Design</span><span>85%</span>
+              </div>
+              <div class="skill__bar"><div class="skill__fill" data-width="85"></div></div>
+            </div>
+          </div>
+          <div class="about__cv">
+            <a href="Ismael_Palay_Resume_English.pdf" download class="btn btn--ghost about__cv-btn">
+              <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 16l-4-4h2.5V4h3v8H16l-4 4z" fill="currentColor"/><path d="M4 18h16v2H4v-2z" fill="currentColor"/></svg>
+              <span data-i18n="about-cv">Download CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="work__header">
+        <p class="section__label" data-i18n="work-label">Portfolio</p>
+        <h2 class="section__title" data-i18n="work-title">My work</h2>
+        <p class="work__subtitle" data-i18n="work-subtitle">Real projects, real results.</p>
+        <div class="work__filters">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter-all">All</button>
+          <button class="filter-btn" data-filter="landing" data-i18n="filter-landing">Landing Pages</button>
+          <button class="filter-btn" data-filter="web" data-i18n="filter-web">Web Pages</button>
+        </div>
+      </div>
+
+      <div class="work__grid" id="workGrid">
+
+        <!-- CARD 1 -->
+        <article class="card" data-category="landing">
+          <div class="card__img">
+            <div class="card__placeholder card__placeholder--1">
+              <div class="card__mock">
+                <div class="card__mock-bar"></div>
+                <div class="card__mock-hero"></div>
+                <div class="card__mock-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__overlay">
+              <a href="#" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-landing">Landing Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card1-title">SaaS Product Landing</h3>
+            <p class="card__desc" data-i18n="card1-desc">Landing page for a software product with hero section, features, testimonials, and conversion CTA.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card" data-category="web">
+          <div class="card__img card__img--iframe">
+            <iframe
+              src="https://gabriela-byd.vercel.app"
+              class="card__iframe"
+              loading="lazy"
+              scrolling="no"
+              tabindex="-1"
+              title="Corporate Site for Sales Advisor"
+            ></iframe>
+            <div class="card__overlay">
+              <a href="https://gabriela-byd.vercel.app" target="_blank" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-web">Web Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card2-title">Corporate Site for Sales Advisor</h3>
+            <p class="card__desc" data-i18n="card2-desc">Professional website for a BYD sales advisor featuring profile, model catalog, and direct contact form.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card" data-category="landing">
+          <div class="card__img">
+            <div class="card__screenshot" style="background-image: url('img_gimnasio.png');"></div>
+            <div class="card__overlay">
+              <a href="https://marcaacme.vercel.app/" target="_blank" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-landing">Landing Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card3-title">Fitness Service Landing</h3>
+            <p class="card__desc" data-i18n="card3-desc">Landing page for a gym or personal trainer with dynamic design and pricing section.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card" data-category="web">
+          <div class="card__img">
+            <div class="card__placeholder card__placeholder--4">
+              <div class="card__mock">
+                <div class="card__mock-bar"></div>
+                <div class="card__mock-sidebar">
+                  <div class="card__mock-sidebar-left"></div>
+                  <div class="card__mock-sidebar-right">
+                    <div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__overlay">
+              <a href="#" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-web">Web Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card4-title">Online Store</h3>
+            <p class="card__desc" data-i18n="card4-desc">E-commerce with product catalog, shopping cart, and integrated checkout system.</p>
+            <div class="card__stack">
+              <span>React</span><span>CSS</span><span>API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="card" data-category="landing">
+          <div class="card__img">
+            <div class="card__screenshot" style="background-image: url('img_stetics.png');"></div>
+            <div class="card__overlay">
+              <a href="https://stetics-by-isma.vercel.app/" target="_blank" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-landing">Landing Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card5-title">Aesthetics &amp; Wellness Landing</h3>
+            <p class="card__desc" data-i18n="card5-desc">Landing page for an aesthetics clinic presenting services, process, and a consultation form.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6 -->
+        <article class="card" data-category="web">
+          <div class="card__img">
+            <div class="card__placeholder card__placeholder--6">
+              <div class="card__mock">
+                <div class="card__mock-bar"></div>
+                <div class="card__mock-portfolio">
+                  <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__overlay">
+              <a href="#" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-web">Web Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card6-title">Photographer Portfolio</h3>
+            <p class="card__desc" data-i18n="card6-desc">Visual website for a professional photographer with dynamic gallery and booking sessions.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 7 -->
+        <article class="card" data-category="web">
+          <div class="card__img">
+            <div class="card__screenshot" style="background-image: url('img_gym_admin.png');"></div>
+            <div class="card__overlay">
+              <a href="https://gymacmeadmin.vercel.app" target="_blank" class="card__link-btn" data-i18n="card-view">View project →</a>
+            </div>
+            <span class="card__badge" data-i18n="badge-web">Web Page</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="card7-title">Gym Admin Panel</h3>
+            <p class="card__desc" data-i18n="card7-desc">Full admin dashboard fully connected to the fitness landing page — leads, members, classes, and cash payments in real time.</p>
+            <div class="card__stack">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span>
+            </div>
+            <div class="card__demo-badge" data-i18n-html="card7-demo">Demo access: <strong>246810</strong></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="work__cta">
+        <p data-i18n="work-cta-text">Have a project in mind?</p>
+        <a href="#contact" class="btn btn--primary" data-i18n="work-cta-btn">Let's talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="process__header">
+        <p class="section__label" data-i18n="process-label">How I work</p>
+        <h2 class="section__title" data-i18n="process-title">My process</h2>
+      </div>
+      <div class="process__steps">
+        <div class="process__step">
+          <div class="process__step-num">01</div>
+          <div class="process__step-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><path d="M12 20h16M20 12l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="process-1-title">Discovery</h3>
+          <p data-i18n="process-1-desc">I understand your business, goals, and audience before writing a single line of code.</p>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="process__step-num">02</div>
+          <div class="process__step-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 14h32" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="11" r="1.5" fill="currentColor"/><circle cx="14" cy="11" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3 data-i18n="process-2-title">Design</h3>
+          <p data-i18n="process-2-desc">I create wireframes and visual prototypes that define the structure and aesthetic of the project.</p>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="process__step-num">03</div>
+          <div class="process__step-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M10 28l6-16 8 12 4-6 6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="process-3-title">Development</h3>
+          <p data-i18n="process-3-desc">I build the site with clean, optimized, and fully responsive code for all devices.</p>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="process__step-num">04</div>
+          <div class="process__step-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 20l8 8 16-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="process-4-title">Delivery</h3>
+          <p data-i18n="process-4-desc">I launch the project, run final tests, and hand everything over ready for you to use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <p class="section__label" data-i18n="contact-label">Contact</p>
+          <h2 class="section__title" data-i18n-html="contact-title">Let's work<br />together</h2>
+          <p class="contact__desc" data-i18n="contact-desc">
+            Have a project in mind? I'd love to hear from you.
+            Tell me your idea and we'll build something amazing.
+          </p>
+          <div class="contact__items">
+            <a href="mailto:iismaelmadrigal.46@gmail.com" class="contact__item" id="contactEmail">
+              <div class="contact__item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8M3 8a1 1 0 011-1h16a1 1 0 011 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <span class="contact__item-label" data-i18n="contact-email-label">Email</span>
+                <span class="contact__item-value">iismaelmadrigal.46@gmail.com</span>
+              </div>
+            </a>
+            <a href="sms:+13463730309&body=Hi%20Ismael%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you." class="contact__item" id="contactMsg">
+              <div class="contact__item-icon contact__item-icon--msg">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 2C6.477 2 2 6.15 2 11.25c0 2.27.87 4.35 2.3 5.97L3 21l4.1-1.27A10.3 10.3 0 0012 20.5c5.523 0 10-4.15 10-9.25S17.523 2 12 2z" fill="url(#msgContactGrad)"/><defs><linearGradient id="msgContactGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62e878"/><stop offset="100%" stop-color="#30d158"/></linearGradient></defs></svg>
+              </div>
+              <div>
+                <span class="contact__item-label" data-i18n="contact-msg-label">iMessage</span>
+                <span class="contact__item-value">+1 (346) 373-0309</span>
+              </div>
+            </a>
+            <a href="https://wa.me/13463730309?text=Hi%20Ismael%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you%20%F0%9F%91%8B" target="_blank" class="contact__item" id="contactWa">
+              <div class="contact__item-icon contact__item-icon--wa">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.057 23.057a.75.75 0 00.92.92l5.205-1.475A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.68-.522-5.2-1.43l-.373-.22-3.868 1.096 1.096-3.868-.22-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <div>
+                <span class="contact__item-label" data-i18n="contact-wa-label">WhatsApp</span>
+                <span class="contact__item-value">+1 (346) 373-0309</span>
+              </div>
+            </a>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <span class="contact__item-label" data-i18n="contact-avail-label">Availability</span>
+                <span class="contact__item-value" data-i18n="contact-avail-value">Open to new projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name" data-i18n="form-name">Name</label>
+              <input type="text" id="name" data-i18n-placeholder="form-name-ph" placeholder="Your name" required />
+            </div>
+            <div class="form__group">
+              <label for="email" data-i18n="form-email">Email</label>
+              <input type="email" id="email" data-i18n-placeholder="form-email-ph" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="subject" data-i18n="form-subject">Project type</label>
+            <select id="subject">
+              <option value="" data-i18n="form-option-0">Select an option</option>
+              <option data-i18n="form-option-1">Landing Page</option>
+              <option data-i18n="form-option-2">Full Website</option>
+              <option data-i18n="form-option-3">Redesign</option>
+              <option data-i18n="form-option-4">Other</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="contactMethod" data-i18n="form-contact-method">Preferred contact</label>
+            <select id="contactMethod">
+              <option value="" data-i18n="form-contact-0">Select a platform</option>
+              <option value="email" data-i18n="form-contact-1">Email</option>
+              <option value="whatsapp" data-i18n="form-contact-2">WhatsApp</option>
+              <option value="imessage" data-i18n="form-contact-3">iMessage</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form-message">Message</label>
+            <textarea id="message" rows="5" data-i18n-placeholder="form-msg-ph" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="form-submit">Send message →</button>
+          <div class="form__success" id="formSuccess" data-i18n="form-success">
+            ✓ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <span class="nav__logo-name" style="font-size:.95rem;color:var(--white)">ISMAEL PALAY</span>
+        </div>
+        <p class="footer__copy" data-i18n="footer-copy">© 2026 · Ismael Palay Madrigal · Designed and developed with care</p>
+        <div class="footer__links">
+          <a href="#hero" data-i18n="footer-home">Home</a>
+          <a href="#work" data-i18n="nav-work">Work</a>
+          <a href="#contact" data-i18n="nav-contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">✕</button>
+    <img src="foto_perfil.jpeg" alt="Ismael Palay Madrigal" class="lightbox__img" />
+  </div>
+
+  <!-- FLOATING BADGES -->
+  <div class="float-badges">
+    <a href="https://wa.me/13463730309?text=Hi%20Ismael%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you%20%F0%9F%91%8B"
+       target="_blank" class="float-badge float-badge--wa" aria-label="WhatsApp" id="badgeWa">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.057 23.057a.75.75 0 00.92.92l5.205-1.475A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.68-.522-5.2-1.43l-.373-.22-3.868 1.096 1.096-3.868-.22-.373A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="float-badge__label" data-i18n="badge-wa-label">Let's work together!</span>
+    </a>
+    <a href="sms:+13463730309&body=Hi%20Ismael%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you."
+       class="float-badge float-badge--msg" aria-label="iMessage" id="badgeMsg">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5.5" fill="url(#msgBadgeGrad)"/>
+        <path d="M12 4.5C7.306 4.5 3.5 7.81 3.5 11.875c0 2.056.957 3.913 2.51 5.258L5.25 19.5l2.84-1.09c1.2.528 2.54.84 3.91.84 4.694 0 8.5-3.31 8.5-7.375S16.694 4.5 12 4.5z" fill="white"/>
+        <defs><linearGradient id="msgBadgeGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5DF57A"/><stop offset="100%" stop-color="#26C940"/></linearGradient></defs>
+      </svg>
+      <span class="float-badge__label" data-i18n="badge-msg-label">iMessage me</span>
+    </a>
+    <a href="mailto:iismaelmadrigal.46@gmail.com?subject=Web%20Project&body=Hi%20Ismael%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you."
+       class="float-badge float-badge--mail" aria-label="Email" id="badgeMail">
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M3 8l9 6 9-6M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8M3 8a1 1 0 011-1h16a1 1 0 011 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span class="float-badge__label" data-i18n="badge-mail-label">Send me an email</span>
+    </a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
