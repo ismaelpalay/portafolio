@@ -285,7 +285,8 @@ const animObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
-      animObserver.unobserve(entry.target); /* solo dispara una vez */
+    } else {
+      entry.target.classList.remove('is-visible');
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
