@@ -1149,3 +1149,75 @@ input, textarea, select { font-family: inherit; }
   .float-badge { padding: 14px; }
   .float-badges { bottom: 20px; right: 16px; }
 }
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+
+/* Base — todos los elementos animables parten invisibles */
+[data-anim] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+[data-anim].is-visible {
+  opacity: 1;
+}
+
+/* Easing compartido — suave, sin rebote */
+[data-anim] {
+  transition:
+    opacity   0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    filter    0.6s  cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* — Tipos de entrada — */
+[data-anim="up"]    { transform: translateY(55px); }
+[data-anim="down"]  { transform: translateY(-40px); }
+[data-anim="left"]  { transform: translateX(-70px); }
+[data-anim="right"] { transform: translateX(70px); }
+[data-anim="scale"] { transform: scale(0.86) translateY(30px); filter: blur(3px); }
+[data-anim="card"]  { transform: translateY(70px) scale(0.93); filter: blur(2px); }
+[data-anim="fade"]  { /* solo opacity */ }
+
+[data-anim].is-visible {
+  transform: none;
+  filter: none;
+}
+
+/* — Delays para superposición (se solapan durante la animación) — */
+[data-delay="100"] { transition-delay: 0.10s; }
+[data-delay="150"] { transition-delay: 0.15s; }
+[data-delay="200"] { transition-delay: 0.20s; }
+[data-delay="280"] { transition-delay: 0.28s; }
+[data-delay="360"] { transition-delay: 0.36s; }
+[data-delay="440"] { transition-delay: 0.44s; }
+[data-delay="80"]  { transition-delay: 0.08s; }
+
+/* Cards: hover sigue funcionando sin interferir con la animación */
+.card[data-anim].is-visible {
+  transition:
+    opacity   0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    filter    0.6s  cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+}
+.card[data-anim].is-visible:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Parallax — hero orbs responden al scroll vía JS */
+.hero__orb { will-change: transform; }
+
+/* Línea decorativa animada bajo section__label */
+.section__label[data-anim]::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--blue-mid);
+  margin-top: 6px;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+.section__label[data-anim].is-visible::after { width: 32px; }

@@ -222,19 +222,87 @@ const skillObserver = new IntersectionObserver(entries => {
 const skillSection = document.querySelector('.about__skills');
 if (skillSection) skillObserver.observe(skillSection);
 
-/* ===== SCROLL REVEAL ===== */
-const revealObserver = new IntersectionObserver(entries => {
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Asignar tipo y delay a cada elemento */
+function setupAnimations() {
+  const rules = [
+    /* Sección About */
+    { sel: '.about__card',              anim: 'left'  },
+    { sel: '.about__text .section__label', anim: 'fade', delay: 100 },
+    { sel: '.about__text .section__title', anim: 'up',   delay: 180 },
+    { sel: '.about__desc:nth-of-type(1)',  anim: 'up',   delay: 260 },
+    { sel: '.about__desc:nth-of-type(2)',  anim: 'up',   delay: 320 },
+    { sel: '.about__skills',            anim: 'up',   delay: 380 },
+    { sel: '.about__cv',                anim: 'fade', delay: 440 },
+
+    /* Sección Work */
+    { sel: '.work__header .section__label', anim: 'fade' },
+    { sel: '.work__header .section__title', anim: 'up',   delay: 100 },
+    { sel: '.work__subtitle',              anim: 'up',   delay: 180 },
+    { sel: '.work__filters',               anim: 'up',   delay: 260 },
+
+    /* Sección Process */
+    { sel: '.process__header .section__label', anim: 'fade' },
+    { sel: '.process__header .section__title', anim: 'up', delay: 100 },
+
+    /* Sección Contact */
+    { sel: '.contact__info .section__label', anim: 'left' },
+    { sel: '.contact__info .section__title', anim: 'left', delay: 100 },
+    { sel: '.contact__desc',                 anim: 'left', delay: 180 },
+    { sel: '.contact__items',                anim: 'left', delay: 260 },
+    { sel: '.contact__form',                 anim: 'right' },
+
+    /* Footer */
+    { sel: '.footer__inner', anim: 'up' },
+  ];
+
+  rules.forEach(({ sel, anim, delay }) => {
+    document.querySelectorAll(sel).forEach(el => {
+      el.dataset.anim = anim;
+      if (delay) el.dataset.delay = delay;
+    });
+  });
+
+  /* Cards — efecto card con superposición (delay escalonado corto) */
+  document.querySelectorAll('.card').forEach((el, i) => {
+    el.dataset.anim = 'card';
+    /* delay de 80ms entre cards — se solapan durante la animación */
+    el.dataset.delay = [0, 80, 160, 0, 80, 160, 0][i] ?? 0;
+  });
+
+  /* Process steps — entran desde abajo uno a uno con solapamiento */
+  document.querySelectorAll('.process__step').forEach((el, i) => {
+    el.dataset.anim = 'scale';
+    el.dataset.delay = i * 120;
+  });
+}
+
+setupAnimations();
+
+/* Observer único para todos los elementos [data-anim] */
+const animObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
+      entry.target.classList.add('is-visible');
+      animObserver.unobserve(entry.target); /* solo dispara una vez */
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.card, .process__step, .about__card').forEach(el => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
+document.querySelectorAll('[data-anim]').forEach(el => animObserver.observe(el));
+
+/* ===== PARALLAX en Hero ===== */
+const orb1 = document.querySelector('.hero__orb--1');
+const orb2 = document.querySelector('.hero__orb--2');
+const orb3 = document.querySelector('.hero__orb--3');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (orb1) orb1.style.transform = `translateY(${y * 0.18}px)`;
+  if (orb2) orb2.style.transform = `translateY(${y * -0.12}px)`;
+  if (orb3) orb3.style.transform = `translateY(${y * 0.08}px)`;
+}, { passive: true });
 
 /* ===== WORK FILTER ===== */
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -291,25 +359,6 @@ const sectionObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-/* ===== CSS REVEAL STYLES (injected) ===== */
-const style = document.createElement('style');
-style.textContent = `
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .6s ease, transform .6s ease;
-  }
-  .reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .card:nth-child(2) { transition-delay: .1s; }
-  .card:nth-child(3) { transition-delay: .2s; }
-  .card:nth-child(4) { transition-delay: .05s; }
-  .card:nth-child(5) { transition-delay: .15s; }
-  .card:nth-child(6) { transition-delay: .25s; }
-`;
-document.head.appendChild(style);
 
 /* ===== PHOTO LIGHTBOX ===== */
 const lightbox = document.getElementById('lightbox');
